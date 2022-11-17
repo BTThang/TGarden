@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="slogan_name">We will help you take care of your garden!!</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="lenght_pass">Password must be longer than 6 characters</string>
+    <string name="authentication_failed">Authentication failed!!!</string>
+
+<!--Tab-->
+    <string name="home">HOME</string>
+    <string name="setting">SETTINGS</string>
+    <string name="data">DATA</string>
+    <string name="account">ACCOUNT</string>
+
+<!--Activity main-->
+    <string name="app_name">TGarden</string>
+    <string name="select_lang">Select Language</string>
+    <string name="connect_wifi">Connect Wifi</string>
+    <string name="create_account">Sign up</string>
+    <string name="login">Sign in</string>
+    <string name="signin">Sign up</string>
+
+<!--Login and Sign up-->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="confirm">Confirm</string>
+    <string name="question_login">Do you have an account? Log in? </string>
+    <string name="remember">Remember me</string>
+    <string name="question_signup">Do not have an account? Sign up? </string>
+    <string name="recover_pass">Forgot password? Password recovery</string>
+    <string name="recover">Recover?</string>
+    <string name="cancel">Cancel?</string>
+    <string name="send_mail">Send mail: </string>
+
+    <string name="err_login">Account or Password incorrect! Please login again</string>
+
+    <!--    Display-->
+
+    <string name="light_int">Light Intensity</string>
+    <string name="temp">Temperature</string>
+    <string name="air_humidity">Air Humidity</string>
+    <string name="soil_moisture">Soil Moisture</string>
+    <string name="rain_sensor">Rain</string>
+    <string name="have_rain">It is raining</string>
+    <string name="no_rain">What a nice day!</string>
+    <string name="status_machine">Status Machine</string>
+
+    <!--    Setting fragment-->
+
+    <string name="automation">Automation</string>
+
+
+</resources>

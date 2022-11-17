@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationOwner.RetailerSettingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/phone2">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/background_gradient3">
+
+                <TextView
+                    android:id="@+id/textAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/automation"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <Switch
+                    android:id="@+id/switch_autoMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="30sp"
+                    android:focusable="false"
+                    android:thumb="@drawable/rectangle_thumb"
+                    android:track="@drawable/rectangle_track"/>
+            </TableRow>
+
+            <TableRow>
+
+
+
+
+
+            </TableRow>
+
+
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

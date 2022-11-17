@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="slogan_name">Chúng tôi sẽ giúp bạn chăm sóc khu vườn của bạn!!!</string>
+    <string name="invalid_email">Email không hợp lệ</string>
+    <string name="lenght_pass">Mật khẩu phải dài hơn 6 ký tự</string>
+    <string name="authentication_failed">Quá trình xác thực thất bại</string>
+
+    <string name="home">Trang chủ</string>
+    <string name="setting">Cài đặt</string>
+    <string name="data">Dữ liệu</string>
+    <string name="account">Tài khoản</string>
+
+
+    <string name="app_name">TGarden</string>
+    <string name="select_lang">Thay đổi ngôn ngữ</string>
+    <string name="connect_wifi">Kết nối Wifi</string>
+    <string name="create_account">Tạo tài khoản mới</string>
+    <string name="login">Đăng nhập</string>
+    <string name="signin">Đăng ký</string>
+
+    <string name="confirm">Xác nhận</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Mật Khẩu</string>
+    <string name="question_login">Bạn đã có tài khoản? Đăng nhập?</string>
+    <string name="question_signup">Bạn chưa có tài khoản? Đăng ký? </string>
+    <string name="remember">Ghi nhớ thông tin</string>
+    <string name="recover_pass">Quên mật khẩu? Khôi phục mật khẩu?</string>
+    <string name="recover">Khôi phục?</string>
+    <string name="cancel">Hủy bỏ?</string>
+    <string name="send_mail">Gửi tới email: </string>
+    <string name="err_login">Tài khoản hoặc mật khẩu không đúng vui lòng nhập lại!</string>
+
+    <!--    Display-->
+
+    <string name="light_int">Cường độ ánh sáng</string>
+    <string name="temp">Nhiệt độ</string>
+    <string name="air_humidity">Độ ẩm không khí</string>
+    <string name="soil_moisture">Độ ẩm đất</string>
+    <string name="rain_sensor">Mưa</string>
+    <string name="have_rain">Trời đang mưa</string>
+    <string name="no_rain">Trời tạnh mưa</string>
+    <string name="status_machine">Trạng thái thiết bị</string>
+
+
+    <!--    Setting fragment-->
+
+    <string name="automation">Chế độ tự động</string>
+
+
+
+
+</resources>

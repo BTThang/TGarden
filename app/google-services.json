@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "376619505312",
+    "firebase_url": "https://tgarden-f7710-default-rtdb.firebaseio.com",
+    "project_id": "tgarden-f7710",
+    "storage_bucket": "tgarden-f7710.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376619505312:android:b31b6b24c7fe4394bc9bc5",
+        "android_client_info": {
+          "package_name": "com.example.tgarden"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376619505312-nqfqot6nvj9pfc64clfssnc8rhfag415.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9swod-tKGFqQhQikwb8qd8Gc00s0VH5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376619505312-nqfqot6nvj9pfc64clfssnc8rhfag415.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
