@@ -36,7 +36,7 @@
 
 <!--    Display-->
 
-    <string name="light_int">Light Intensity</string>
+    <string name="light_int">Lights Intensity</string>
     <string name="temp">Temperature</string>
     <string name="air_humidity">Air Humidity</string>
     <string name="soil_moisture">Soil Moisture</string>
@@ -48,6 +48,35 @@
 <!--    Setting fragment-->
 
     <string name="automation">Automation</string>
+    <string name="fan_limit">Limit Fan</string>
+    <string name="temp_greater">Temperature greater: </string>
+
+    <string name="lamp_limit">Limit Lamp</string>
+    <string name="lamp_smaller">Lights intensity smaller: </string>
+
+    <string name="misting_limit">Limit Misting</string>
+    <string name="hum_smaller">Humidity smaller: </string>
+
+    <string name="pump_limit">Limit Pump</string>
+    <string name="soil_smaller">Soil Moisture smaller: </string>
+
+    <string name="manual">Manual</string>
+    <string name="device">Device</string>
+    <string name="status">Status</string>
+    <string name="parameter">Parameters</string>
+
+    <string name="alarm">Alarm</string>
+    <string name="pump_alarm">Pump</string>
+    <string name="lamp_alarm">Lamp</string>
+    <string name="fan_alarm">Fan</string>
+    <string name="humidifier_alarm">Humidifier</string>
+
+    <string name="time1">Time 1</string>
+    <string name="time2">Time 2</string>
+
+
+
+
 
 
 

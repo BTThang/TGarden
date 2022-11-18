@@ -46,6 +46,7 @@ public class RetailerAccountFragment extends Fragment {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         mAuth.signOut();
+                                        checkUserStatus();
                                     }
                                 });
                 builder.create().show();

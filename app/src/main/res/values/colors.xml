@@ -29,4 +29,15 @@
     <color name="pink6">#DA9DD3</color>
     <color name="red">#EF0857</color>
 
+<!--    Phone 3-->
+    <color name="bluepurple">#215FD3</color>
+    <color name="bluedark">#1227DE</color>
+    <color name="white3">#CEE0EC</color>
+    <color name="grenn3">#2D99B0</color>
+
+<!--    Phone 4-->
+    <color name="vua">#5FAA8C</color>
+    <color name="nhat">#A0BAB0</color>
+    <color name="green4">#298F55</color>
+    <color name="white4">#F7F9FA</color>
 </resources>

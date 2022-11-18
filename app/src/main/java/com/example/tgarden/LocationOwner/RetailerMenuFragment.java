@@ -89,8 +89,8 @@ public class RetailerMenuFragment extends Fragment {
         Firebase mRefSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/soil");
         Firebase mRefRain = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/rain");
 
-        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Light1");
-        Firebase btnLight2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Light2");
+        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Lights");
+        Firebase btnLight2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Humidifier");
         Firebase btnPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Fan");
         Firebase btnFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Pump");
 
@@ -161,10 +161,10 @@ public class RetailerMenuFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String value = dataSnapshot.getValue(String.class);
                 if (value.equals("1")) {
-                    imageLight2.setImageResource(R.drawable.lighton);
+                    imageLight2.setImageResource(R.drawable.humidifier);
                     imageStatus2.setImageResource(R.drawable.switchon1);
                 } else if (value.equals("0")) {
-                    imageLight2.setImageResource(R.drawable.lightoff);
+                    imageLight2.setImageResource(R.drawable.humidifier_off);
                     imageStatus2.setImageResource(R.drawable.switchoff1);
                 }
             }

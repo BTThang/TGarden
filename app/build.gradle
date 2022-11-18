@@ -15,6 +15,7 @@ android {
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 //    signingConfigs {
 //        debug {
@@ -44,7 +45,10 @@ android {
         targetCompatibility 1.8
     }
 }
-
+allprojects {
+    repositories {
+    }
+}
 
 
 dependencies {
@@ -61,6 +65,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     implementation 'com.google.firebase:firebase-database:20.1.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
 
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.airbnb.android:lottie:3.4.1'
@@ -72,6 +77,10 @@ dependencies {
     implementation 'com.github.free-bots:TemperatureGauge:1.0.0'
     implementation 'com.github.zurche:plain-pie:v0.2.9'
     implementation 'com.github.Pygmalion69:Gauge:1.5.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'com.macroyau:thingspeakandroid:0.2.2'
 
 
 //    Chip Navigation

@@ -45,6 +45,31 @@
     <!--    Setting fragment-->
 
     <string name="automation">Chế độ tự động</string>
+    <string name="fan_limit">Ngưỡng bật quạt</string>
+    <string name="temp_greater">Nhiệt độ lớn hơn: </string>
+
+    <string name="lamp_limit">Ngưỡng bật đèn:</string>
+    <string name="lamp_smaller">Cường độ ánh sáng nhỏ hơn: </string>
+
+    <string name="misting_limit">Ngưỡng bật máy phun sương</string>
+    <string name="hum_smaller">Độ ẩm không khí nhỏ hơn: </string>
+
+    <string name="pump_limit">Ngưỡng bật máy bơm</string>
+    <string name="soil_smaller">Độ ẩm đất nhỏ hơn: </string>
+
+    <string name="manual">Chế độ điều khiển bằng tay</string>
+    <string name="device">Thiết bị</string>
+    <string name="status">Trạng thái</string>
+    <string name="parameter">Thông số</string>
+
+    <string name="alarm">Chế độ hẹn giờ</string>
+    <string name="pump_alarm">Máy bơm</string>
+    <string name="lamp_alarm">Bóng đèn</string>
+    <string name="fan_alarm">Quạt</string>
+    <string name="humidifier_alarm">Hệ thống phun sương</string>
+
+    <string name="time1">Lần 1</string>
+    <string name="time2">Lần 2</string>
 
 
 
