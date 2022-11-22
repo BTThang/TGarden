@@ -772,7 +772,7 @@ public class RetailerSettingFragment extends Fragment {
 //        +++++++++++++++++++++++++++++++++++++++++++++++++++++++Setting status Manual Mode+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         //Set Lamp manual***************************************************************************************************************
-       mReSwLamp.addValueEventListener(new ValueEventListener() {
+        mReSwLamp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String Value = dataSnapshot.getValue(String.class);
@@ -782,7 +782,7 @@ public class RetailerSettingFragment extends Fragment {
                     } else if (Value.equals("0")) {
                         lampSwitch.setChecked(false);
                     }
-                    lampCheck = false;
+//                    lampCheck = false;
                 }
 
             }
@@ -792,6 +792,7 @@ public class RetailerSettingFragment extends Fragment {
 
             }
         });
+
 
         mReLights.addValueEventListener(new ValueEventListener() {
             @Override
@@ -812,13 +813,13 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference lamp = database.getReference("S2_Lamp");
-                    lamp.setValue("1");
+                    DatabaseReference myLamp = database.getReference("S2_Lamp");
+                    myLamp.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference lamp = database.getReference("S2_Lamp");
-                    lamp.setValue("0");
+                    DatabaseReference myLamp = database.getReference("S2_Lamp");
+                    myLamp.setValue("0");
                     drawable.reverseTransition(200);
                 }
             }
@@ -867,13 +868,13 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference fan = database.getReference("S3_Fan");
-                    fan.setValue("1");
+                    DatabaseReference myFan = database.getReference("S3_Fan");
+                    myFan.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference fan = database.getReference("S3_Fan");
-                    fan.setValue("0");
+                    DatabaseReference myFan = database.getReference("S3_Fan");
+                    myFan.setValue("0");
                     drawable.reverseTransition(200);
                 }
             }
@@ -901,6 +902,7 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
+
         mReSoil.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -921,8 +923,8 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference pump = database.getReference("S4_Pump");
-                    pump.setValue("1");
+                    DatabaseReference myPump = database.getReference("S4_Pump");
+                    myPump.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
