@@ -813,7 +813,7 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference lamp = database.getReference("S2_Lamp");
-                    lamp.setValue(1);
+                    lamp.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -868,7 +868,7 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference fan = database.getReference("S3_Fan");
-                    fan.setValue(1);
+                    fan.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -922,7 +922,7 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference pump = database.getReference("S4_Pump");
-                    pump.setValue(1);
+                    pump.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -974,7 +974,7 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference hum = database.getReference("S5_Hum");
-                    hum.setValue(1);
+                    hum.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();

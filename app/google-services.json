@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "376619505312-cr51skhj88k6cml3tgc7346dsr9kik5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tgarden",
+            "certificate_hash": "4d656c8f6276b83883d0905d6ab2b18f04a43c10"
+          }
+        },
+        {
           "client_id": "376619505312-nqfqot6nvj9pfc64clfssnc8rhfag415.apps.googleusercontent.com",
           "client_type": 3
         }
