@@ -148,11 +148,10 @@ public class RetailerSettingFragment extends Fragment {
 
 //        Set Switch Firebase
 
-        final Firebase mReSwLamp = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S2_Lamp");
-        final Firebase mReSwFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S3_Fan");
-        final Firebase mReSwPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S4_Pump");
-        final Firebase mReSwHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S5_Hum");
-
+        final Firebase mReSwLamp = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY1/S1_Lamp");
+        final Firebase mReSwFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY2/S2_Fan");
+        final Firebase mReSwPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY3/S3_Pump");
+        final Firebase mReSwHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY4/S4_Hum");
 //        Set Mode Firebase
 
         final Firebase mSwAuto = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S1_Auto");
@@ -776,14 +775,14 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String Value = dataSnapshot.getValue(String.class);
-                if (lampCheck) {
+//                if (lampCheck) {
                     if (Value.equals("1")) {
                         lampSwitch.setChecked(true);
                     } else if (Value.equals("0")) {
                         lampSwitch.setChecked(false);
                     }
 //                    lampCheck = false;
-                }
+//                }
 
             }
 
@@ -813,12 +812,12 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myLamp = database.getReference("S2_Lamp");
+                    DatabaseReference myLamp = database.getReference("RELAY1/S1_Lamp");
                     myLamp.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myLamp = database.getReference("S2_Lamp");
+                    DatabaseReference myLamp = database.getReference("RELAY1/S1_Lamp");
                     myLamp.setValue("0");
                     drawable.reverseTransition(200);
                 }
@@ -832,14 +831,14 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String Value = dataSnapshot.getValue(String.class);
-                if (fanCheck) {
+//                if (fanCheck) {
                     if (Value.equals("1")) {
                         fanSwitch.setChecked(true);
                     } else if (Value.equals("0")) {
                         fanSwitch.setChecked(false);
                     }
-                    fanCheck = false;
-                }
+//                    fanCheck = false;
+
             }
 
             @Override
@@ -868,12 +867,12 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myFan = database.getReference("S3_Fan");
+                    DatabaseReference myFan = database.getReference("RELAY2/S2_Fan");
                     myFan.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myFan = database.getReference("S3_Fan");
+                    DatabaseReference myFan = database.getReference("RELAY2/S2_Fan");
                     myFan.setValue("0");
                     drawable.reverseTransition(200);
                 }
@@ -886,14 +885,14 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String Value = dataSnapshot.getValue(String.class);
-                if (pumpCheck) {
+//                if (pumpCheck) {
                     if (Value.equals("1")) {
                         pumpSwitch.setChecked(true);
                     } else if (Value.equals("0")) {
                         pumpSwitch.setChecked(false);
                     }
-                    pumpCheck = false;
-                }
+//                    pumpCheck = false;
+//                }
             }
 
             @Override
@@ -923,12 +922,12 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myPump = database.getReference("S4_Pump");
+                    DatabaseReference myPump = database.getReference("RELAY3/S3_Pump");
                     myPump.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference pump = database.getReference("S4_Pump");
+                    DatabaseReference pump = database.getReference("RELAY3/S3_Pump");
                     pump.setValue("0");
                     drawable.reverseTransition(200);
                 }
@@ -940,14 +939,14 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String Value = dataSnapshot.getValue(String.class);
-                if (mistCheck) {
+//                if (mistCheck) {
                     if (Value.equals("1")) {
                         HumSwitch.setChecked(true);
                     } else if (Value.equals("0")) {
                         HumSwitch.setChecked(false);
                     }
-                    mistCheck = false;
-                }
+//                    mistCheck = false;
+//                }
             }
 
             @Override
@@ -975,12 +974,12 @@ public class RetailerSettingFragment extends Fragment {
 
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference hum = database.getReference("S5_Hum");
+                    DatabaseReference hum = database.getReference("RELAY4/S4_Hum");
                     hum.setValue("1");
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference hum = database.getReference("S5_Hum");
+                    DatabaseReference hum = database.getReference("RELAY4/S4_Hum");
                     hum.setValue("0");
                     drawable.reverseTransition(200);
                 }
