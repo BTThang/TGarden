@@ -44,7 +44,9 @@
     <string name="have_rain">It is raining</string>
     <string name="no_rain">It is not raining</string>
     <string name="status_machine">Status Machine</string>
-
+    <string name="dark">It is dark</string>
+    <string name= "cloudy">It is cloudy </string>
+    <string name= "sunny">It is sunny </string>
 <!--    Setting fragment-->
 
     <string name="automation">Automation</string>

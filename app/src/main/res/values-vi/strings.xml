@@ -41,6 +41,10 @@
     <string name="no_rain">Trời tạnh mưa</string>
     <string name="status_machine">Trạng thái thiết bị</string>
 
+    <string name="dark">Trời tối</string>
+    <string name= "cloudy">Trời có mây </string>
+    <string name= "sunny">Trời nắng </string>
+
 
     <!--    Setting fragment-->
 

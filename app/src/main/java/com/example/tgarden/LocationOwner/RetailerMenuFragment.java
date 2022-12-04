@@ -48,7 +48,7 @@ public class RetailerMenuFragment extends Fragment {
     private Gauge tempGauge;
 
     float MIN_TEMP = 0;
-    private  int MAX_TEMP = 150;
+    private int MAX_TEMP = 150;
 
     public RetailerMenuFragment() {
 
@@ -84,7 +84,7 @@ public class RetailerMenuFragment extends Fragment {
         Firebase.setAndroidContext(requireContext());
 
         final Firebase mRefTemp = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/dht22/temp");
-        Firebase mRefLight = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/light");
+        Firebase mRefLight = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/lights");
         Firebase mRefHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/dht22/hum");
         Firebase mRefSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/soil");
         Firebase mRefRain = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/rain");
@@ -217,15 +217,38 @@ public class RetailerMenuFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")){
+                if (value.equals("1")) {
                     rainText.setText(R.string.have_rain);
                     imageRain.setImageResource(R.drawable.rain);
-                }
-                else if(value.equals("0")){
+                } else if (value.equals("0")) {
                     rainText.setText(R.string.no_rain);
                     imageRain.setImageResource(R.drawable.sun);
                 }
             }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        mRefLight.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                int i = Integer.parseInt(value);
+                if (i < 6) {
+                    lightText.setText(R.string.dark);
+                    imageLight.setImageResource(R.drawable.moon);
+                } else if (i > 5 & i < 100) {
+                    lightText.setText(R.string.cloudy);
+                    imageLight.setImageResource(R.drawable.cloudy);
+                } else {
+                    lightText.setText(R.string.sunny);
+                    imageLight.setImageResource(R.drawable.sunny);
+                }
+            }
+
             @Override
             public void onCancelled(FirebaseError firebaseError) {
 
@@ -237,7 +260,7 @@ public class RetailerMenuFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Float value = dataSnapshot.getValue(Float.class);
-                textTemp.setText(value+"°C");
+                textTemp.setText(value + "°C");
                 tempGauge.moveToValue(value);
             }
 
@@ -249,8 +272,6 @@ public class RetailerMenuFragment extends Fragment {
 
         return view;
     }
-
-
 
 
 }
