@@ -989,15 +989,17 @@ public class RetailerSettingFragment extends Fragment {
 
 //        ++++++++++++++++++++++++++++++++++++++++++++++++++++Setting Auto Mode++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
 //        Setting auto Fan
         mAutoTempH.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                int value = dataSnapshot.getValue(int.class);
 
-                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
                 if (nhietdo_high) {
-                    seekTemp.setProgress(i);
+                    seekTemp.setProgress(value);
                     nhietdo_high = false;
                 }
             }
@@ -1013,9 +1015,10 @@ public class RetailerSettingFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 textTemp.setText(progress + "°C");
                 String temp = String.valueOf(progress);
+                int i = Integer.parseInt(temp);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference highTemp = database.getReference("TGarden/Auto/Temp_high");
-                highTemp.setValue(temp);
+                highTemp.setValue(i);
             }
 
             @Override
@@ -1034,11 +1037,11 @@ public class RetailerSettingFragment extends Fragment {
         mAutoLights.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                int value = dataSnapshot.getValue(int.class);
 
-                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
                 if (anhsang_high) {
-                    seekLights.setProgress(i);
+                    seekLights.setProgress(value);
                     anhsang_high = false;
                 }
             }
@@ -1054,9 +1057,10 @@ public class RetailerSettingFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 textLights.setText(progress + "lux");
                 String lights = String.valueOf(progress);
+                int i = Integer.parseInt(lights);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference highlights = database.getReference("TGarden/Auto/Lights");
-                highlights.setValue(lights);
+                highlights.setValue(i);
             }
 
             @Override
@@ -1075,11 +1079,11 @@ public class RetailerSettingFragment extends Fragment {
         mAutoHum.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                int value = dataSnapshot.getValue(int.class);
 
-                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
                 if (doamkhi_low) {
-                    seekHum.setProgress(i);
+                    seekHum.setProgress(value);
                     doamkhi_low = false;
                 }
             }
@@ -1095,9 +1099,10 @@ public class RetailerSettingFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 textHum.setText(progress + "%");
                 String hum = String.valueOf(progress);
+                int i = Integer.parseInt(hum);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference highHum = database.getReference("TGarden/Auto/Hum");
-                highHum.setValue(hum);
+                highHum.setValue(i);
             }
 
             @Override
@@ -1116,11 +1121,10 @@ public class RetailerSettingFragment extends Fragment {
         mAutoSoil.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-
-                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+                int value = dataSnapshot.getValue(int.class);
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
                 if (doamdat) {
-                    seekSoil.setProgress(i);
+                    seekSoil.setProgress(value);
                     doamdat = false;
                 }
             }
@@ -1136,9 +1140,10 @@ public class RetailerSettingFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 textSoil.setText(progress + "%");
                 String soil = String.valueOf(progress);
+                int i = Integer.parseInt(soil);
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference highSoil = database.getReference("TGarden/Auto/Soil");
-                highSoil.setValue(soil);
+                highSoil.setValue(i);
             }
 
             @Override
