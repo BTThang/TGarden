@@ -22,25 +22,40 @@
             android:orientation="vertical">
 
             <lecho.lib.hellocharts.view.LineChartView
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="250dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/chart1"
-                android:layout_marginTop="15dp"
-                android:outlineAmbientShadowColor="@color/black" />
+                android:layout_marginTop="20dp"
+                android:outlineAmbientShadowColor="@color/black"
+                />
 
             <lecho.lib.hellocharts.view.LineChartView
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="250dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/chart2"/>
 
             <lecho.lib.hellocharts.view.LineChartView
-                android:layout_width="wrap_content"
+                android:layout_width="380dp"
                 android:layout_height="250dp"
                 android:id="@+id/chart3"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:layout_width="380dp"
+                android:layout_height="250dp"
+                android:id="@+id/chart4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"/>
 
 
+
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="200dp"/>
 
         </LinearLayout>
     </ScrollView>

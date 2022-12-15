@@ -774,11 +774,11 @@ public class RetailerSettingFragment extends Fragment {
         mReSwLamp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String Value = dataSnapshot.getValue(String.class);
+                int Value = dataSnapshot.getValue(int.class);
 //                if (lampCheck) {
-                    if (Value.equals("1")) {
+                    if (Value == 1) {
                         lampSwitch.setChecked(true);
-                    } else if (Value.equals("0")) {
+                    } else if (Value == 0) {
                         lampSwitch.setChecked(false);
                     }
 //                    lampCheck = false;
@@ -813,12 +813,12 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myLamp = database.getReference("RELAY1/S1_Lamp");
-                    myLamp.setValue("1");
+                    myLamp.setValue(1);
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myLamp = database.getReference("RELAY1/S1_Lamp");
-                    myLamp.setValue("0");
+                    myLamp.setValue(0);
                     drawable.reverseTransition(200);
                 }
             }
@@ -830,11 +830,11 @@ public class RetailerSettingFragment extends Fragment {
         mReSwFan.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String Value = dataSnapshot.getValue(String.class);
+                int Value = dataSnapshot.getValue(int.class);
 //                if (fanCheck) {
-                    if (Value.equals("1")) {
+                    if (Value == 1) {
                         fanSwitch.setChecked(true);
-                    } else if (Value.equals("0")) {
+                    } else if (Value == 0) {
                         fanSwitch.setChecked(false);
                     }
 //                    fanCheck = false;
@@ -868,12 +868,12 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myFan = database.getReference("RELAY2/S2_Fan");
-                    myFan.setValue("1");
+                    myFan.setValue(1);
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myFan = database.getReference("RELAY2/S2_Fan");
-                    myFan.setValue("0");
+                    myFan.setValue(0);
                     drawable.reverseTransition(200);
                 }
             }
@@ -884,11 +884,11 @@ public class RetailerSettingFragment extends Fragment {
         mReSwPump.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String Value = dataSnapshot.getValue(String.class);
+                int Value = dataSnapshot.getValue(int.class);
 //                if (pumpCheck) {
-                    if (Value.equals("1")) {
+                    if (Value == 1) {
                         pumpSwitch.setChecked(true);
-                    } else if (Value.equals("0")) {
+                    } else if (Value ==0) {
                         pumpSwitch.setChecked(false);
                     }
 //                    pumpCheck = false;
@@ -923,12 +923,12 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myPump = database.getReference("RELAY3/S3_Pump");
-                    myPump.setValue("1");
+                    myPump.setValue(1);
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference pump = database.getReference("RELAY3/S3_Pump");
-                    pump.setValue("0");
+                    pump.setValue(0);
                     drawable.reverseTransition(200);
                 }
             }
@@ -938,11 +938,11 @@ public class RetailerSettingFragment extends Fragment {
         mReSwHum.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String Value = dataSnapshot.getValue(String.class);
+                int Value = dataSnapshot.getValue(int.class);
 //                if (mistCheck) {
-                    if (Value.equals("1")) {
+                    if (Value == 1) {
                         HumSwitch.setChecked(true);
-                    } else if (Value.equals("0")) {
+                    } else if (Value == 0) {
                         HumSwitch.setChecked(false);
                     }
 //                    mistCheck = false;
@@ -975,12 +975,12 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference hum = database.getReference("RELAY4/S4_Hum");
-                    hum.setValue("1");
+                    hum.setValue(1);
                     drawable.startTransition(800);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference hum = database.getReference("RELAY4/S4_Hum");
-                    hum.setValue("0");
+                    hum.setValue(0);
                     drawable.reverseTransition(200);
                 }
             }
