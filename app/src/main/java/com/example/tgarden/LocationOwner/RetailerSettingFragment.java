@@ -37,10 +37,14 @@ public class RetailerSettingFragment extends Fragment {
     boolean check = false;
 
     private boolean anhsang_high = true;
+    private boolean anhsang_low = true;
     private boolean nhietdo_high = true;
     private boolean nhietdo_low = true;
+
     private boolean doamkhi_low = true;
-    private boolean doamdat = true;
+    private boolean doamkhi_high = true;
+    private boolean doamdat_low = true;
+    private boolean doamdat_high = true;
 
     private boolean lampCheck = true;
     private boolean fanCheck = true;
@@ -61,6 +65,11 @@ public class RetailerSettingFragment extends Fragment {
         final SeekBar seekLights = view.findViewById(R.id.seekBar2);
         final SeekBar seekHum = view.findViewById(R.id.seekBar3);
         final SeekBar seekSoil = view.findViewById(R.id.seekBar4);
+
+        final SeekBar seekTempoff = view.findViewById(R.id.seekBar11);
+        final SeekBar seekLightsoff = view.findViewById(R.id.seekBar22);
+        final SeekBar seekHumoff = view.findViewById(R.id.seekBar33);
+        final SeekBar seekSoiloff = view.findViewById(R.id.seekBar44);
 
         //Set alarm Lamp1
         final EditText hourLamp1 = view.findViewById(R.id.lamphourlan1);
@@ -133,6 +142,11 @@ public class RetailerSettingFragment extends Fragment {
         final TextView textHum = view.findViewById(R.id.text3);
         final TextView textSoil = view.findViewById(R.id.text4);
 
+        final TextView textTempoff = view.findViewById(R.id.text11);
+        final TextView textLightsoff = view.findViewById(R.id.text22);
+        final TextView textHumoff = view.findViewById(R.id.text33);
+        final TextView textSoiloff = view.findViewById(R.id.text44);
+
 //        Set Mode
 
         final Switch autoSwitch = view.findViewById(R.id.switch_autoMode);
@@ -154,8 +168,8 @@ public class RetailerSettingFragment extends Fragment {
         final Firebase mReSwHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY4/S4_Hum");
 //        Set Mode Firebase
 
-        final Firebase mSwAuto = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S1_Auto");
-        final Firebase mSwManual = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/S1_Manual");
+        final Firebase mSwAuto = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/S1_Auto");
+        final Firebase mSwManual = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/S1_Manual");
         final Firebase mSwAlarm = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Status");
 
 //        Set Firebase Auto
@@ -165,6 +179,10 @@ public class RetailerSettingFragment extends Fragment {
         final Firebase mAutoHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Hum");
         final Firebase mAutoSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Soil");
         final Firebase mAutoLights = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Lights");
+
+        final Firebase mAutoHumOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Hum_off");
+        final Firebase mAutoSoilOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Soil_off");
+        final Firebase mAutoLightsOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Lights_off");
 
 //        Read Firebase sensor
         final Firebase mReHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/dht22/hum");
@@ -1032,8 +1050,49 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
+        //        Setting auto  Fan off
+        mAutoTempL.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int value = dataSnapshot.getValue(int.class);
 
-        //        Setting auto Lamp
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+                if (nhietdo_low) {
+                    seekTempoff.setProgress(value);
+                    nhietdo_low = false;
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        seekTempoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textTempoff.setText(progress + "°C");
+                String temp = String.valueOf(progress);
+                int i = Integer.parseInt(temp);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference highTemp = database.getReference("TGarden/Auto/Temp_low");
+                highTemp.setValue(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        //        Setting auto Lamp On
         mAutoLights.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -1074,8 +1133,50 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
+        //        Setting auto Lamp OFF
+        mAutoLightsOff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int value = dataSnapshot.getValue(int.class);
 
-        //        Setting auto Humidifier
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+                if (anhsang_low) {
+                    seekLightsoff.setProgress(value);
+                    anhsang_low = false;
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        seekLightsoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textLightsoff.setText(progress + "lux");
+                String lights = String.valueOf(progress);
+                int i = Integer.parseInt(lights);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference highlights = database.getReference("TGarden/Auto/Lights_off");
+                highlights.setValue(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+
+        //        Setting auto Humidifier On
         mAutoHum.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -1116,16 +1217,57 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
+        //        Setting auto Humidifier Off
+        mAutoHumOff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int value = dataSnapshot.getValue(int.class);
 
-        //        Setting auto Pump
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+                if (doamkhi_high) {
+                    seekHumoff.setProgress(value);
+                    doamkhi_high = false;
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        seekHumoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textHumoff.setText(progress + "%");
+                String hum = String.valueOf(progress);
+                int i = Integer.parseInt(hum);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference highHum = database.getReference("TGarden/Auto/Hum_off");
+                highHum.setValue(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        //        Setting auto Pump On
         mAutoSoil.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int value = dataSnapshot.getValue(int.class);
 //                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
-                if (doamdat) {
+                if (doamdat_low) {
                     seekSoil.setProgress(value);
-                    doamdat = false;
+                    doamdat_low = false;
                 }
             }
 
@@ -1157,16 +1299,56 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
+        //        Setting auto Pump Off
+        mAutoSoilOff.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                int value = dataSnapshot.getValue(int.class);
+//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+                if (doamdat_high) {
+                    seekSoiloff.setProgress(value);
+                    doamdat_high = false;
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
+        seekSoiloff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textSoiloff.setText(progress + "%");
+                String soil = String.valueOf(progress);
+                int i = Integer.parseInt(soil);
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference highSoil = database.getReference("TGarden/Auto/Soil_off");
+                highSoil.setValue(i);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
 
 //        ++++++++++++++++++++++++++++++++++++++++++++++++++++Setting Mode++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //        Mode Auto Switch
         mSwAuto.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value ==1) {
                     autoSwitch.setChecked(true);
-                } else if (value.equals("0")) {
+                } else if (value ==0) {
                     autoSwitch.setChecked(false);
                 }
             }
@@ -1182,13 +1364,13 @@ public class RetailerSettingFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myAuto = database.getReference("S1_Auto");
+                    DatabaseReference myAuto = database.getReference("TGarden/S1_Auto");
                     myAuto.setValue("1");
                     manualSwitch.setChecked(false);
                     alarmSwitch.setChecked(false);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myAuto = database.getReference("S1_Auto");
+                    DatabaseReference myAuto = database.getReference("TGarden/S1_Auto");
                     myAuto.setValue("0");
                 }
             }
@@ -1199,10 +1381,10 @@ public class RetailerSettingFragment extends Fragment {
         mSwManual.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value ==1) {
                     manualSwitch.setChecked(true);
-                } else if (value.equals("0")) {
+                } else if (value == 0) {
                     manualSwitch.setChecked(false);
                 }
             }
@@ -1218,14 +1400,14 @@ public class RetailerSettingFragment extends Fragment {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myMan = database.getReference("S1_Manual");
-                    myMan.setValue("1");
+                    DatabaseReference myMan = database.getReference("TGarden/S1_Manual");
+                    myMan.setValue(1);
                     autoSwitch.setChecked(false);
                     alarmSwitch.setChecked(false);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myMan = database.getReference("S1_Manual");
-                    myMan.setValue("0");
+                    DatabaseReference myMan = database.getReference("TGarden/S1_Manual");
+                    myMan.setValue(0);
                 }
             }
         });
@@ -1235,10 +1417,10 @@ public class RetailerSettingFragment extends Fragment {
         mSwAlarm.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value == 1) {
                     alarmSwitch.setChecked(true);
-                } else if (value.equals("0")) {
+                } else if (value ==0 ) {
                     alarmSwitch.setChecked(false);
                 }
             }
@@ -1255,13 +1437,13 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myAlarm = database.getReference("TGarden/Alarm/Status");
-                    myAlarm.setValue("1");
+                    myAlarm.setValue(1);
                     autoSwitch.setChecked(false);
                     manualSwitch.setChecked(false);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myAlarm = database.getReference("TGarden/Alarm/Status");
-                    myAlarm.setValue("0");
+                    myAlarm.setValue(0);
                 }
             }
         });

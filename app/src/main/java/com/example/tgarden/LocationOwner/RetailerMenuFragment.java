@@ -89,10 +89,10 @@ public class RetailerMenuFragment extends Fragment {
         Firebase mRefSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/soil");
         Firebase mRefRain = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/rain");
 
-        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Lights");
-        Firebase btnLight2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Humidifier");
-        Firebase btnPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Fan");
-        Firebase btnFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/status/Pump");
+        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY1/S1_Lamp");
+        Firebase btnLight2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY2/S2_Lamp");
+        Firebase btnPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY3/S3_Pump");
+        Firebase btnFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY4/S4_Hum");
 
         pieView_hum.setPercentageBackgroundColor(getResources().getColor(R.color.greennhat));
         //        pieView_hum.setMainBackgroundColor(getResources().getColor(R.color.white));
@@ -104,11 +104,11 @@ public class RetailerMenuFragment extends Fragment {
         btnFan.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value == 1) {
                     imageFan.setImageResource(R.drawable.fan);
                     imageStatus4.setImageResource(R.drawable.switchon1);
-                } else if (value.equals("0")) {
+                } else if (value == 0) {
                     imageFan.setImageResource(R.drawable.fanoff);
                     imageStatus4.setImageResource(R.drawable.switchoff1);
                 }
@@ -122,11 +122,11 @@ public class RetailerMenuFragment extends Fragment {
         btnPump.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value == 1) {
                     imagePump.setImageResource(R.drawable.pump2);
                     imageStatus3.setImageResource(R.drawable.switchon1);
-                } else if (value.equals("0")) {
+                } else if (value == 0) {
                     imagePump.setImageResource(R.drawable.pumpoff);
                     imageStatus3.setImageResource(R.drawable.switchoff1);
                 }
@@ -140,11 +140,11 @@ public class RetailerMenuFragment extends Fragment {
         btnLight1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value == 1) {
                     imageLight1.setImageResource(R.drawable.lighton);
                     imageStatus1.setImageResource(R.drawable.switchon1);
-                } else if (value.equals("0")) {
+                } else if (value == 0) {
                     imageLight1.setImageResource(R.drawable.lightoff);
                     imageStatus1.setImageResource(R.drawable.switchoff1);
                 }
@@ -159,11 +159,11 @@ public class RetailerMenuFragment extends Fragment {
         btnLight2.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                if (value.equals("1")) {
+                int value = dataSnapshot.getValue(int.class);
+                if (value == 1) {
                     imageLight2.setImageResource(R.drawable.humidifier);
                     imageStatus2.setImageResource(R.drawable.switchon1);
-                } else if (value.equals("0")) {
+                } else if (value == 0) {
                     imageLight2.setImageResource(R.drawable.humidifier_off);
                     imageStatus2.setImageResource(R.drawable.switchoff1);
                 }

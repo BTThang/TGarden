@@ -50,16 +50,28 @@
 
     <string name="automation">Chế độ tự động</string>
     <string name="fan_limit">Ngưỡng bật quạt</string>
+    <string name="fan_limitoff">Ngưỡng tắt quạt</string>
+
     <string name="temp_greater">Nhiệt độ lớn hơn: </string>
+    <string name="temp_smaller">Nhiệt độ nhỏ hơn: </string>
 
     <string name="lamp_limit">Ngưỡng bật đèn:</string>
+    <string name="lamp_limitoff">Ngưỡng tắt đèn:</string>
+
     <string name="lamp_smaller">Cường độ ánh sáng nhỏ hơn: </string>
+    <string name="lamp_greater">Cường độ ánh sáng lớn hơn: </string>
 
     <string name="misting_limit">Ngưỡng bật máy phun sương</string>
+    <string name="misting_limitoff">Ngưỡng tắt máy phun sương</string>
+
     <string name="hum_smaller">Độ ẩm không khí nhỏ hơn: </string>
+    <string name="hum_greater">Độ ẩm không khí lớn hơn: </string>
 
     <string name="pump_limit">Ngưỡng bật máy bơm</string>
+    <string name="pump_limitoff">Ngưỡng tắt máy bơm</string>
+
     <string name="soil_smaller">Độ ẩm đất nhỏ hơn: </string>
+    <string name="soil_greater">Độ ẩm đất lớn hơn: </string>
 
     <string name="manual">Chế độ điều khiển bằng tay</string>
     <string name="device">Thiết bị</string>

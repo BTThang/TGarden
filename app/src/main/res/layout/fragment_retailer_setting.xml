@@ -63,8 +63,8 @@
                     android:id="@+id/text1"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginTop="5dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/purple_700"
                     android:textSize="20sp" />
             </TableRow>
@@ -93,6 +93,57 @@
                     android:progressDrawable="@drawable/control_volume" />
             </LinearLayout>
 
+            <!--            nguong tat quat-->
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textFanoff"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/fan_limitoff"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/purple_700"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <LinearLayout>
+
+                <TextView
+                    android:id="@+id/temp_smaller"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/temp_smaller"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/seekBar11"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/control_volume2" />
+            </LinearLayout>
+
+            <!--            Nguong bat den-->
+
 
             <TableRow android:layout_marginTop="5dp">
 
@@ -110,9 +161,9 @@
                 <TextView
                     android:id="@+id/text2"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/purple_700"
                     android:textSize="20sp" />
             </TableRow>
@@ -141,6 +192,57 @@
                     android:progressDrawable="@drawable/control_volume" />
             </LinearLayout>
 
+            <!--            Nguong tat den-->
+
+
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textLightoff"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/lamp_limitoff"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/purple_700"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <LinearLayout>
+
+                <TextView
+                    android:id="@+id/lamp_greater"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/lamp_greater"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/seekBar22"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/control_volume2" />
+            </LinearLayout>
+
+<!--            Nguong bat he thong phun suong-->
 
             <TableRow android:layout_marginTop="5dp">
 
@@ -158,9 +260,9 @@
                 <TextView
                     android:id="@+id/text3"
                     android:layout_width="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/purple_700"
                     android:textSize="20sp" />
             </TableRow>
@@ -189,7 +291,57 @@
                     android:progressDrawable="@drawable/control_volume" />
             </LinearLayout>
 
+            <!--            Nguong tat he thong phun suong-->
 
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textMistingoff"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/misting_limitoff"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/purple_700"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <LinearLayout>
+
+                <TextView
+                    android:id="@+id/hum_greater"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/hum_greater"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/seekBar33"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/control_volume2" />
+            </LinearLayout>
+
+
+<!--Nguong bat may bom nuoc-->
             <TableRow android:layout_marginTop="5dp">
 
                 <TextView
@@ -207,8 +359,8 @@
                     android:id="@+id/text4"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:layout_marginTop="5dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/purple_700"
                     android:textSize="20sp" />
             </TableRow>
@@ -237,6 +389,54 @@
                     android:progressDrawable="@drawable/control_volume" />
             </LinearLayout>
 
+            <!--Nguong tat may bom nuoc-->
+            <TableRow android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textPumpoff"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/pump_limitoff"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/purple_700"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <LinearLayout>
+
+                <TextView
+                    android:id="@+id/soil_greater"
+                    android:layout_width="180dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/soil_greater"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <SeekBar
+                    android:id="@+id/seekBar44"
+                    android:layout_width="180dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/control_volume2" />
+            </LinearLayout>
+
 
             <TableRow
                 android:layout_width="wrap_content"
@@ -245,9 +445,9 @@
 
                 <TextView
                     android:id="@+id/textManual"
-                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:text="@string/manual"
                     android:textColor="@color/white"
@@ -268,8 +468,7 @@
 
             <TableLayout>
 
-                <TableRow
-                    android:layout_marginTop="5dp">
+                <TableRow android:layout_marginTop="5dp">
 
                     <TextView
                         android:id="@+id/text5"
@@ -304,47 +503,52 @@
 
 
                 <TableRow>
+
                     <ImageView
                         android:id="@+id/imageView1"
                         android:layout_width="43dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/lightran"/>
+                        android:src="@drawable/lightran" />
+
                     <Switch
                         android:id="@+id/switch1"
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
                         android:textSize="18sp"
                         android:thumb="@drawable/rectangle_thumb"
                         android:track="@drawable/rectangle_track" />
+
                     <TextView
                         android:id="@+id/den"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
                         android:textColor="@color/black"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </TableRow>
 
-                <TableRow
-                    android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="10dp">
+
                     <ImageView
                         android:id="@+id/imageView2"
                         android:layout_width="43dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/fantrans"/>
+                        android:src="@drawable/fantrans" />
+
                     <Switch
                         android:id="@+id/switch2"
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
                         android:textSize="18sp"
                         android:thumb="@drawable/rectangle_thumb"
                         android:track="@drawable/rectangle_track" />
+
                     <TextView
                         android:id="@+id/quat"
                         android:layout_width="wrap_content"
@@ -357,50 +561,54 @@
                 </TableRow>
 
 
-                <TableRow
-                    android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="10dp">
+
                     <ImageView
                         android:id="@+id/imageView3"
                         android:layout_width="43dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/pumptran"/>
+                        android:src="@drawable/pumptran" />
+
                     <Switch
                         android:id="@+id/switch3"
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
                         android:textSize="18sp"
                         android:thumb="@drawable/rectangle_thumb"
                         android:track="@drawable/rectangle_track" />
+
                     <TextView
                         android:id="@+id/bom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
                         android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
                         android:textColor="@color/black"
                         android:textSize="17sp"
                         android:textStyle="bold" />
                 </TableRow>
 
 
-                <TableRow
-                    android:layout_marginTop="10dp">
+                <TableRow android:layout_marginTop="10dp">
+
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="43dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/humitran"/>
+                        android:src="@drawable/humitran" />
+
                     <Switch
                         android:id="@+id/switch4"
-                        android:layout_marginTop="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
                         android:textSize="18sp"
                         android:thumb="@drawable/rectangle_thumb"
                         android:track="@drawable/rectangle_track" />
+
                     <TextView
                         android:id="@+id/suong"
                         android:layout_width="wrap_content"
@@ -441,12 +649,12 @@
                     android:track="@drawable/rectangle_track" />
             </TableRow>
 
-<!--            Set    Alarm    Lamp-->
+            <!--            Set    Alarm    Lamp-->
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="@color/blue2"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -462,11 +670,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time1"
                     android:textSize="20sp" />
 
@@ -510,11 +719,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time2"
                     android:textSize="20sp" />
 
@@ -553,11 +763,11 @@
                     android:track="@drawable/rectangle_track" />
             </LinearLayout>
 
-<!--            Set alarm Fan-->
+            <!--            Set alarm Fan-->
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="@color/blue2"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -573,11 +783,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time1"
                     android:textSize="20sp" />
 
@@ -621,11 +832,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time2"
                     android:textSize="20sp" />
 
@@ -664,11 +876,11 @@
                     android:track="@drawable/rectangle_track" />
             </LinearLayout>
 
-<!--Set alarm Pump-->
+            <!--Set alarm Pump-->
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="@color/blue2"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -684,11 +896,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time1"
                     android:textSize="20sp" />
 
@@ -732,11 +945,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time2"
                     android:textSize="20sp" />
 
@@ -776,12 +990,12 @@
             </LinearLayout>
 
 
-<!--            Set alarm humidifier-->
+            <!--            Set alarm humidifier-->
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="@color/blue2"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -797,11 +1011,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time1"
                     android:textSize="20sp" />
 
@@ -845,11 +1060,12 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="0dp"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="70dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/time2"
                     android:textSize="20sp" />
 
@@ -890,9 +1106,10 @@
 
 
             <TableRow>
+
                 <Space
                     android:layout_width="20dp"
-                    android:layout_height="200dp"/>
+                    android:layout_height="200dp" />
             </TableRow>
         </TableLayout>
 
