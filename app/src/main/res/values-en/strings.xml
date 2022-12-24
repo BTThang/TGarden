@@ -52,29 +52,29 @@
 
     <string name="automation">Automation</string>
 
-    <string name="fan_limit">Limit Fan On</string>
+    <string name="fan_limit">Light On/Off Threshold:</string>
     <string name="fan_limitoff">Limit Fan Off</string>
 
-    <string name="temp_greater">Temperature greater: </string>
+    <string name="temp_greater">Temperature: </string>
     <string name="temp_smaller">Temperature smaller: </string>
 
-    <string name="lamp_limit">Limit Lamp On</string>
+    <string name="lamp_limit">Lamp On/Off Threshold</string>
     <string name="lamp_limitoff">Limit Lamp Off</string>
 
-    <string name="lamp_smaller">Lights intensity smaller: </string>
+    <string name="lamp_smaller">Lights intensity: </string>
     <string name="lamp_greater">Lights intensity greater: </string>
 
-    <string name="misting_limit">Limit Misting On</string>
+    <string name="misting_limit">Misting On/Off Threshold:</string>
     <string name="misting_limitoff">Limit Misting Off</string>
 
-    <string name="hum_smaller">Humidity smaller: </string>
+    <string name="hum_smaller">Humidity: </string>
     <string name="hum_greater">Humidity greater: </string>
 
 
-    <string name="pump_limit">Limit Pump On</string>
+    <string name="pump_limit">Pump On/Off Threshold:</string>
     <string name="pump_limitoff">Limit Pump Off</string>
 
-    <string name="soil_smaller">Soil Moisture smaller: </string>
+    <string name="soil_smaller">Soil Moisture: </string>
     <string name="soil_greater">Soil Moisture greater: </string>
 
     <string name="manual">Manual</string>

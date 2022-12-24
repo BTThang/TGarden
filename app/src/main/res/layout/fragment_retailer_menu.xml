@@ -307,14 +307,14 @@
                         android:layout_marginTop="15dp" />
 
                     <ImageView
-                        android:id="@+id/light2"
+                        android:id="@+id/fan"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="30dp"
                         android:textColor="@color/white" />
 
                     <ImageView
-                        android:id="@+id/light2_status"
+                        android:id="@+id/fan_status"
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="15dp" />
@@ -345,14 +345,14 @@
                         android:textColor="@color/white" />
 
                     <ImageView
-                        android:id="@+id/fan1"
+                        android:id="@+id/hum"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginStart="25dp"
                         android:textColor="@color/white" />
 
                     <ImageView
-                        android:id="@+id/fan_status"
+                        android:id="@+id/hum_status"
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="5dp"

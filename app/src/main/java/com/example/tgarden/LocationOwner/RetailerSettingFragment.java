@@ -66,20 +66,22 @@ public class RetailerSettingFragment extends Fragment {
         final SeekBar seekHum = view.findViewById(R.id.seekBar3);
         final SeekBar seekSoil = view.findViewById(R.id.seekBar4);
 
-        final SeekBar seekTempoff = view.findViewById(R.id.seekBar11);
-        final SeekBar seekLightsoff = view.findViewById(R.id.seekBar22);
-        final SeekBar seekHumoff = view.findViewById(R.id.seekBar33);
-        final SeekBar seekSoiloff = view.findViewById(R.id.seekBar44);
+//        final SeekBar seekTempoff = view.findViewById(R.id.seekBar11);
+//        final SeekBar seekLightsoff = view.findViewById(R.id.seekBar22);
+//        final SeekBar seekHumoff = view.findViewById(R.id.seekBar33);
+//        final SeekBar seekSoiloff = view.findViewById(R.id.seekBar44);
 
         //Set alarm Lamp1
         final EditText hourLamp1 = view.findViewById(R.id.lamphourlan1);
         final EditText minLamp1 = view.findViewById(R.id.lampmintuelan1);
+        final EditText timeoutLamp1 = view.findViewById(R.id.timeout_lamp1);
         final Button setLamp1 = view.findViewById(R.id.btnsetlamplan1);
         final Switch swLamp1 = view.findViewById(R.id.swlamplan1);
 
         //        Set alarm Lamp2
         final EditText hourLamp2 = view.findViewById(R.id.lamphourlan2);
         final EditText minLamp2 = view.findViewById(R.id.lampmintuelan2);
+        final EditText timeoutLamp2 = view.findViewById(R.id.timeout_lamp2);
         final Button setLamp2 = view.findViewById(R.id.btnsetlamplan2);
         final Switch swLamp2 = view.findViewById(R.id.swlamplan2);
 
@@ -87,18 +89,21 @@ public class RetailerSettingFragment extends Fragment {
         //        Set alarm Fan1
         final EditText hourFan1 = view.findViewById(R.id.fanhourlan1);
         final EditText minFan1 = view.findViewById(R.id.fanmintuelan1);
+        final EditText timeoutFan1 = view.findViewById(R.id.timeout_fan1);
         final Button setFan1 = view.findViewById(R.id.btnsetfanlan1);
         final Switch swFan1 = view.findViewById(R.id.swfanlan1);
 
         //        Set alarm Fan2
         final EditText hourFan2 = view.findViewById(R.id.fanhourlan2);
         final EditText minFan2 = view.findViewById(R.id.fanmintuelan2);
+        final EditText timeoutFan2 = view.findViewById(R.id.timeout_fan2);
         final Button setFan2 = view.findViewById(R.id.btnsetfanlan2);
         final Switch swFan2 = view.findViewById(R.id.swfanlan2);
 
         //        Set alarm Pump1
         final EditText hourPump1 = view.findViewById(R.id.pumphourlan1);
         final EditText minPump1 = view.findViewById(R.id.pumpmintuelan1);
+        final EditText timeoutPump1 = view.findViewById(R.id.timeout_pump1);
         final Button setPump1 = view.findViewById(R.id.btnsetpumplan1);
         final Switch swPump1 = view.findViewById(R.id.swpumplan1);
 
@@ -106,18 +111,21 @@ public class RetailerSettingFragment extends Fragment {
         //        Set alarm Pump2
         final EditText hourPump2 = view.findViewById(R.id.pumphourlan2);
         final EditText minPump2 = view.findViewById(R.id.pumpmintuelan2);
+        final EditText timeoutPump2 = view.findViewById(R.id.timeout_pump2);
         final Button setPump2 = view.findViewById(R.id.btnsetpumplan2);
         final Switch swPump2 = view.findViewById(R.id.swpumplan2);
 
         //        Set alarm Humidifier1
         final EditText hourHum1 = view.findViewById(R.id.humhourlan1);
         final EditText minHum1 = view.findViewById(R.id.hummintuelan1);
+        final EditText timeoutHum1 = view.findViewById(R.id.timeout_hum1);
         final Button setHum1 = view.findViewById(R.id.btnsethumlan1);
         final Switch swHum1 = view.findViewById(R.id.swhumlan1);
 
         //        Set alarm Humidifier2
         final EditText hourHum2 = view.findViewById(R.id.humhourlan2);
         final EditText minHum2 = view.findViewById(R.id.hummintuelan2);
+        final EditText timeoutHum2 = view.findViewById(R.id.timeout_hum2);
         final Button setHum2 = view.findViewById(R.id.btnsethumlan2);
         final Switch swHum2 = view.findViewById(R.id.swhumlan2);
 
@@ -142,10 +150,10 @@ public class RetailerSettingFragment extends Fragment {
         final TextView textHum = view.findViewById(R.id.text3);
         final TextView textSoil = view.findViewById(R.id.text4);
 
-        final TextView textTempoff = view.findViewById(R.id.text11);
-        final TextView textLightsoff = view.findViewById(R.id.text22);
-        final TextView textHumoff = view.findViewById(R.id.text33);
-        final TextView textSoiloff = view.findViewById(R.id.text44);
+//        final TextView textTempoff = view.findViewById(R.id.text11);
+//        final TextView textLightsoff = view.findViewById(R.id.text22);
+//        final TextView textHumoff = view.findViewById(R.id.text33);
+//        final TextView textSoiloff = view.findViewById(R.id.text44);
 
 //        Set Mode
 
@@ -175,14 +183,14 @@ public class RetailerSettingFragment extends Fragment {
 //        Set Firebase Auto
 
         final Firebase mAutoTempH = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Temp_high");
-        final Firebase mAutoTempL = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Temp_low");
+//        final Firebase mAutoTempL = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Temp_low");
         final Firebase mAutoHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Hum");
         final Firebase mAutoSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Soil");
         final Firebase mAutoLights = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Lights");
 
-        final Firebase mAutoHumOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Hum_off");
-        final Firebase mAutoSoilOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Soil_off");
-        final Firebase mAutoLightsOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Lights_off");
+//        final Firebase mAutoHumOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Hum_off");
+//        final Firebase mAutoSoilOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Soil_off");
+//        final Firebase mAutoLightsOff = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Auto/Lights_off");
 
 //        Read Firebase sensor
         final Firebase mReHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/dht22/hum");
@@ -194,37 +202,45 @@ public class RetailerSettingFragment extends Fragment {
 //        Link Firebase Pump 1
         final Firebase mHourPump1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump1/Hour");
         final Firebase mMinutePump1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump1/Minutes");
+        final Firebase mAcPump1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump1/Activity");
         final Firebase mStatusPump1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump1/Status");
 //        Link Firebase Pump 2
         final Firebase mHourPump2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump2/Hour");
         final Firebase mMinutePump2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump2/Minutes");
+        final Firebase mAcPump2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump2/Activity");
         final Firebase mStatusPump2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Pump/AmPump2/Status");
 
 //        Link Firebase Lamp 1
         final Firebase mHourLamp1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp1/Hour");
         final Firebase mMinuteLamp1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp1/Minutes");
+        final Firebase mAcLamp1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp1/Activity");
         final Firebase mStatusLamp1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp1/Status");
 //        Link Firebase Lamp 2
         final Firebase mHourLamp2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp2/Hour");
         final Firebase mMinuteLamp2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp2/Minutes");
+        final Firebase mAcLamp2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp2/Activity");
         final Firebase mStatusLamp2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Lamp/AmLamp2/Status");
 
         //        Link Firebase Fan 1
         final Firebase mHourFan1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan1/Hour");
         final Firebase mMinuteFan1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan1/Minutes");
+        final Firebase mAcFan1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan1/Activity");
         final Firebase mStatusFan1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan1/Status");
 //        Link Firebase Fan 2
         final Firebase mHourFan2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan2/Hour");
         final Firebase mMinuteFan2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan2/Minutes");
+        final Firebase mAcFan2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan2/Activity");
         final Firebase mStatusFan2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Fan/AmFan2/Status");
 
 //        Link Firebase Humidifier 1
         final Firebase mHourHum1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum1/Hour");
         final Firebase mMinuteHum1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum1/Minutes");
+        final Firebase mAcHum1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum1/Activity");
         final Firebase mStatusHum1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum1/Status");
 //        Link Firebase Humidifier 2
         final Firebase mHourHum2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum2/Hour");
         final Firebase mMinuteHum2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum2/Minutes");
+        final Firebase mAcHum2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum2/Activity");
         final Firebase mStatusHum2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/Alarm/Humidifier/AmHum2/Status");
 
 
@@ -238,6 +254,18 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swHum2.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+
+        mAcHum2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutHum2.setText(value);
             }
 
             @Override
@@ -275,10 +303,12 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference humHour2 = database.getReference("TGarden/Alarm/Humidifier/AmHum2/Hour");
                 DatabaseReference humMinutes2 = database.getReference("TGarden/Alarm/Humidifier/AmHum2/Minutes");
+                DatabaseReference humAc2 = database.getReference("TGarden/Alarm/Humidifier/AmHum2/Activity");
 
                 humHour2.setValue(hourHum2.getText().toString().trim());
 
                 humMinutes2.setValue(minHum2.getText().toString().trim());
+                humAc2.setValue(timeoutHum2.getText().toString().trim());
             }
         });
 
@@ -308,6 +338,18 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swHum1.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+
+        mAcHum1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutHum1.setText(value);
             }
 
             @Override
@@ -345,10 +387,11 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference humHour1 = database.getReference("TGarden/Alarm/Humidifier/AmHum1/Hour");
                 DatabaseReference humMinutes1 = database.getReference("TGarden/Alarm/Humidifier/AmHum1/Minutes");
-
+                DatabaseReference humAc1 = database.getReference("TGarden/Alarm/Humidifier/AmHum1/Activity");
                 humHour1.setValue(hourHum1.getText().toString().trim());
 
                 humMinutes1.setValue(minHum1.getText().toString().trim());
+                humAc1.setValue(timeoutHum1.getText().toString().trim());
             }
         });
 
@@ -378,6 +421,18 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swPump2.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+
+        mAcPump2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutPump2.setText(value);
             }
 
             @Override
@@ -415,10 +470,13 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference pumpHour2 = database.getReference("TGarden/Alarm/Pump/AmPump2/Hour");
                 DatabaseReference pumpMinutes2 = database.getReference("TGarden/Alarm/Pump/AmPump2/Minutes");
+                DatabaseReference pumpAc2 = database.getReference("TGarden/Alarm/Pump/AmPump2/Activity");
 
                 pumpHour2.setValue(hourPump2.getText().toString().trim());
 
                 pumpMinutes2.setValue(minPump2.getText().toString().trim());
+
+                pumpAc2.setValue(timeoutPump2.getText().toString().trim());
             }
         });
 
@@ -448,6 +506,17 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swPump1.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+        mAcPump1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutPump1.setText(value);
             }
 
             @Override
@@ -485,10 +554,13 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference pumpHour1 = database.getReference("TGarden/Alarm/Pump/AmPump1/Hour");
                 DatabaseReference pumpMinutes1 = database.getReference("TGarden/Alarm/Pump/AmPump1/Minutes");
+                DatabaseReference pumpAc1 = database.getReference("TGarden/Alarm/Pump/AmPump1/Activity");
 
                 pumpHour1.setValue(hourPump1.getText().toString().trim());
 
                 pumpMinutes1.setValue(minPump1.getText().toString().trim());
+
+                pumpAc1.setValue(timeoutPump1.getText().toString().trim());
             }
         });
 
@@ -518,6 +590,17 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swFan2.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+        mAcFan2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutFan2.setText(value);
             }
 
             @Override
@@ -555,10 +638,11 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference fanHour2 = database.getReference("TGarden/Alarm/Fan/AmFan2/Hour");
                 DatabaseReference fanMinutes2 = database.getReference("TGarden/Alarm/Fan/AmFan2/Minutes");
-
+                DatabaseReference fanAc2 = database.getReference("TGarden/Alarm/Fan/AmFan2/Activity");
                 fanHour2.setValue(hourFan2.getText().toString().trim());
 
                 fanMinutes2.setValue(minFan2.getText().toString().trim());
+                fanAc2.setValue(timeoutFan2.getText().toString().trim());
             }
         });
 
@@ -587,6 +671,17 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swFan1.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+        mAcFan1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutFan1.setText(value);
             }
 
             @Override
@@ -624,10 +719,10 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference fanHour1 = database.getReference("TGarden/Alarm/Fan/AmFan1/Hour");
                 DatabaseReference fanMinutes1 = database.getReference("TGarden/Alarm/Fan/AmFan1/Minutes");
-
+                DatabaseReference fanAc1 = database.getReference("TGarden/Alarm/Fan/AmFan1/Activity");
                 fanHour1.setValue(hourFan1.getText().toString().trim());
-
                 fanMinutes1.setValue(minFan1.getText().toString().trim());
+                fanAc1.setValue(timeoutFan1.getText().toString().trim());
             }
         });
 
@@ -656,6 +751,17 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swLamp2.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+        mAcLamp2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutLamp2.setText(value);
             }
 
             @Override
@@ -693,10 +799,10 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference lampHour2 = database.getReference("TGarden/Alarm/Lamp/AmLamp2/Hour");
                 DatabaseReference lampMinutes2 = database.getReference("TGarden/Alarm/Lamp/AmLamp2/Minutes");
-
+                DatabaseReference lampAc2 = database.getReference("TGarden/Alarm/Lamp/AmLamp2/Activity");
                 lampHour2.setValue(hourLamp2.getText().toString().trim());
-
                 lampMinutes2.setValue(minLamp2.getText().toString().trim());
+                lampAc2.setValue(timeoutLamp2.getText().toString().trim());
             }
         });
 
@@ -726,6 +832,18 @@ public class RetailerSettingFragment extends Fragment {
                 } else if (value.equals("0")) {
                     swLamp1.setChecked(false);
                 }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+            }
+        });
+
+        mAcLamp1.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String value = dataSnapshot.getValue(String.class);
+                timeoutLamp1.setText(value);
             }
 
             @Override
@@ -763,10 +881,11 @@ public class RetailerSettingFragment extends Fragment {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference lampHour1 = database.getReference("TGarden/Alarm/Lamp/AmLamp1/Hour");
                 DatabaseReference lampMinutes1 = database.getReference("TGarden/Alarm/Lamp/AmLamp1/Minutes");
+                DatabaseReference lampActivity = database.getReference("TGarden/Alarm/Lamp/AmLamp1/Activity");
 
                 lampHour1.setValue(hourLamp1.getText().toString().trim());
-
                 lampMinutes1.setValue(minLamp1.getText().toString().trim());
+                lampActivity.setValue(timeoutLamp1.getText().toString().trim());
             }
         });
 
@@ -794,11 +913,11 @@ public class RetailerSettingFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int Value = dataSnapshot.getValue(int.class);
 //                if (lampCheck) {
-                    if (Value == 1) {
-                        lampSwitch.setChecked(true);
-                    } else if (Value == 0) {
-                        lampSwitch.setChecked(false);
-                    }
+                if (Value == 1) {
+                    lampSwitch.setChecked(true);
+                } else if (Value == 2) {
+                    lampSwitch.setChecked(false);
+                }
 //                    lampCheck = false;
 //                }
 
@@ -836,7 +955,7 @@ public class RetailerSettingFragment extends Fragment {
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myLamp = database.getReference("RELAY1/S1_Lamp");
-                    myLamp.setValue(0);
+                    myLamp.setValue(2);
                     drawable.reverseTransition(200);
                 }
             }
@@ -850,11 +969,11 @@ public class RetailerSettingFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int Value = dataSnapshot.getValue(int.class);
 //                if (fanCheck) {
-                    if (Value == 1) {
-                        fanSwitch.setChecked(true);
-                    } else if (Value == 0) {
-                        fanSwitch.setChecked(false);
-                    }
+                if (Value == 1) {
+                    fanSwitch.setChecked(true);
+                } else if (Value == 2) {
+                    fanSwitch.setChecked(false);
+                }
 //                    fanCheck = false;
 
             }
@@ -891,7 +1010,7 @@ public class RetailerSettingFragment extends Fragment {
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myFan = database.getReference("RELAY2/S2_Fan");
-                    myFan.setValue(0);
+                    myFan.setValue(2);
                     drawable.reverseTransition(200);
                 }
             }
@@ -904,11 +1023,11 @@ public class RetailerSettingFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int Value = dataSnapshot.getValue(int.class);
 //                if (pumpCheck) {
-                    if (Value == 1) {
-                        pumpSwitch.setChecked(true);
-                    } else if (Value ==0) {
-                        pumpSwitch.setChecked(false);
-                    }
+                if (Value == 1) {
+                    pumpSwitch.setChecked(true);
+                } else if (Value == 2) {
+                    pumpSwitch.setChecked(false);
+                }
 //                    pumpCheck = false;
 //                }
             }
@@ -946,7 +1065,7 @@ public class RetailerSettingFragment extends Fragment {
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference pump = database.getReference("RELAY3/S3_Pump");
-                    pump.setValue(0);
+                    pump.setValue(2);
                     drawable.reverseTransition(200);
                 }
             }
@@ -958,11 +1077,11 @@ public class RetailerSettingFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int Value = dataSnapshot.getValue(int.class);
 //                if (mistCheck) {
-                    if (Value == 1) {
-                        HumSwitch.setChecked(true);
-                    } else if (Value == 0) {
-                        HumSwitch.setChecked(false);
-                    }
+                if (Value == 1) {
+                    HumSwitch.setChecked(true);
+                } else if (Value == 2) {
+                    HumSwitch.setChecked(false);
+                }
 //                    mistCheck = false;
 //                }
             }
@@ -998,7 +1117,7 @@ public class RetailerSettingFragment extends Fragment {
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference hum = database.getReference("RELAY4/S4_Hum");
-                    hum.setValue(0);
+                    hum.setValue(2);
                     drawable.reverseTransition(200);
                 }
             }
@@ -1006,7 +1125,6 @@ public class RetailerSettingFragment extends Fragment {
 
 
 //        ++++++++++++++++++++++++++++++++++++++++++++++++++++Setting Auto Mode++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 
 //        Setting auto Fan
@@ -1051,45 +1169,45 @@ public class RetailerSettingFragment extends Fragment {
         });
 
         //        Setting auto  Fan off
-        mAutoTempL.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int value = dataSnapshot.getValue(int.class);
-
-//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
-                if (nhietdo_low) {
-                    seekTempoff.setProgress(value);
-                    nhietdo_low = false;
-                }
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-
-        seekTempoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textTempoff.setText(progress + "°C");
-                String temp = String.valueOf(progress);
-                int i = Integer.parseInt(temp);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference highTemp = database.getReference("TGarden/Auto/Temp_low");
-                highTemp.setValue(i);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+//        mAutoTempL.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                int value = dataSnapshot.getValue(int.class);
+//
+////                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                if (nhietdo_low) {
+//                    seekTempoff.setProgress(value);
+//                    nhietdo_low = false;
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//
+//        seekTempoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                textTempoff.setText(progress + "°C");
+//                String temp = String.valueOf(progress);
+//                int i = Integer.parseInt(temp);
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference highTemp = database.getReference("TGarden/Auto/Temp_low");
+//                highTemp.setValue(i);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
 
         //        Setting auto Lamp On
@@ -1133,47 +1251,46 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
-        //        Setting auto Lamp OFF
-        mAutoLightsOff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int value = dataSnapshot.getValue(int.class);
-
-//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
-                if (anhsang_low) {
-                    seekLightsoff.setProgress(value);
-                    anhsang_low = false;
-                }
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-
-        seekLightsoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textLightsoff.setText(progress + "lux");
-                String lights = String.valueOf(progress);
-                int i = Integer.parseInt(lights);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference highlights = database.getReference("TGarden/Auto/Lights_off");
-                highlights.setValue(i);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
+//        //        Setting auto Lamp OFF
+//        mAutoLightsOff.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                int value = dataSnapshot.getValue(int.class);
+//
+////                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                if (anhsang_low) {
+//                    seekLightsoff.setProgress(value);
+//                    anhsang_low = false;
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//
+//        seekLightsoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                textLightsoff.setText(progress + "lux");
+//                String lights = String.valueOf(progress);
+//                int i = Integer.parseInt(lights);
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference highlights = database.getReference("TGarden/Auto/Lights_off");
+//                highlights.setValue(i);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
 
         //        Setting auto Humidifier On
@@ -1217,46 +1334,46 @@ public class RetailerSettingFragment extends Fragment {
             }
         });
 
-        //        Setting auto Humidifier Off
-        mAutoHumOff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int value = dataSnapshot.getValue(int.class);
-
-//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
-                if (doamkhi_high) {
-                    seekHumoff.setProgress(value);
-                    doamkhi_high = false;
-                }
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-
-        seekHumoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textHumoff.setText(progress + "%");
-                String hum = String.valueOf(progress);
-                int i = Integer.parseInt(hum);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference highHum = database.getReference("TGarden/Auto/Hum_off");
-                highHum.setValue(i);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+//        //        Setting auto Humidifier Off
+//        mAutoHumOff.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                int value = dataSnapshot.getValue(int.class);
+//
+////                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                if (doamkhi_high) {
+//                    seekHumoff.setProgress(value);
+//                    doamkhi_high = false;
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//
+//        seekHumoff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                textHumoff.setText(progress + "%");
+//                String hum = String.valueOf(progress);
+//                int i = Integer.parseInt(hum);
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference highHum = database.getReference("TGarden/Auto/Hum_off");
+//                highHum.setValue(i);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
 
         //        Setting auto Pump On
@@ -1300,44 +1417,44 @@ public class RetailerSettingFragment extends Fragment {
         });
 
         //        Setting auto Pump Off
-        mAutoSoilOff.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                int value = dataSnapshot.getValue(int.class);
-//                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
-                if (doamdat_high) {
-                    seekSoiloff.setProgress(value);
-                    doamdat_high = false;
-                }
-            }
-
-            @Override
-            public void onCancelled(FirebaseError firebaseError) {
-
-            }
-        });
-
-        seekSoiloff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                textSoiloff.setText(progress + "%");
-                String soil = String.valueOf(progress);
-                int i = Integer.parseInt(soil);
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference highSoil = database.getReference("TGarden/Auto/Soil_off");
-                highSoil.setValue(i);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+//        mAutoSoilOff.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                int value = dataSnapshot.getValue(int.class);
+////                int i = Integer.parseInt(value.replaceAll("[\\D]", ""));
+//                if (doamdat_high) {
+//                    seekSoiloff.setProgress(value);
+//                    doamdat_high = false;
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//
+//        seekSoiloff.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                textSoiloff.setText(progress + "%");
+//                String soil = String.valueOf(progress);
+//                int i = Integer.parseInt(soil);
+//                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                DatabaseReference highSoil = database.getReference("TGarden/Auto/Soil_off");
+//                highSoil.setValue(i);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
 
 //        ++++++++++++++++++++++++++++++++++++++++++++++++++++Setting Mode++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1346,9 +1463,9 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int value = dataSnapshot.getValue(int.class);
-                if (value ==1) {
+                if (value == 1) {
                     autoSwitch.setChecked(true);
-                } else if (value ==0) {
+                } else if (value == 0) {
                     autoSwitch.setChecked(false);
                 }
             }
@@ -1365,13 +1482,13 @@ public class RetailerSettingFragment extends Fragment {
                 if (isChecked) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myAuto = database.getReference("TGarden/S1_Auto");
-                    myAuto.setValue("1");
+                    myAuto.setValue(1);
                     manualSwitch.setChecked(false);
                     alarmSwitch.setChecked(false);
                 } else {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myAuto = database.getReference("TGarden/S1_Auto");
-                    myAuto.setValue("0");
+                    myAuto.setValue(0);
                 }
             }
         });
@@ -1382,7 +1499,7 @@ public class RetailerSettingFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int value = dataSnapshot.getValue(int.class);
-                if (value ==1) {
+                if (value == 1) {
                     manualSwitch.setChecked(true);
                 } else if (value == 0) {
                     manualSwitch.setChecked(false);
@@ -1420,7 +1537,7 @@ public class RetailerSettingFragment extends Fragment {
                 int value = dataSnapshot.getValue(int.class);
                 if (value == 1) {
                     alarmSwitch.setChecked(true);
-                } else if (value ==0 ) {
+                } else if (value == 0) {
                     alarmSwitch.setChecked(false);
                 }
             }

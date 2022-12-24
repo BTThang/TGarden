@@ -95,52 +95,52 @@
 
             <!--            nguong tat quat-->
 
-            <TableRow android:layout_marginTop="5dp">
+<!--            <TableRow android:layout_marginTop="5dp">-->
 
-                <TextView
-                    android:id="@+id/textFanoff"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/fan_limitoff"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textFanoff"-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="@string/fan_limitoff"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:id="@+id/text11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/purple_700"
-                    android:textSize="20sp" />
-            </TableRow>
+<!--                <TextView-->
+<!--                    android:id="@+id/text11"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textColor="@color/purple_700"-->
+<!--                    android:textSize="20sp" />-->
+<!--            </TableRow>-->
 
-            <LinearLayout>
+<!--            <LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/temp_smaller"
-                    android:layout_width="180dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/temp_smaller"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="normal" />
+<!--                <TextView-->
+<!--                    android:id="@+id/temp_smaller"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="@string/temp_smaller"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="normal" />-->
 
-                <SeekBar
-                    android:id="@+id/seekBar11"
-                    android:layout_width="180dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/control_volume2" />
-            </LinearLayout>
+<!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar11"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:max="100"-->
+<!--                    android:progress="0"-->
+<!--                    android:progressDrawable="@drawable/control_volume2" />-->
+<!--            </LinearLayout>-->
 
             <!--            Nguong bat den-->
 
@@ -195,52 +195,52 @@
             <!--            Nguong tat den-->
 
 
-            <TableRow android:layout_marginTop="5dp">
+<!--            <TableRow android:layout_marginTop="5dp">-->
 
-                <TextView
-                    android:id="@+id/textLightoff"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/lamp_limitoff"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textLightoff"-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="@string/lamp_limitoff"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:id="@+id/text22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/purple_700"
-                    android:textSize="20sp" />
-            </TableRow>
+<!--                <TextView-->
+<!--                    android:id="@+id/text22"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textColor="@color/purple_700"-->
+<!--                    android:textSize="20sp" />-->
+<!--            </TableRow>-->
 
-            <LinearLayout>
+<!--            <LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/lamp_greater"
-                    android:layout_width="180dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/lamp_greater"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="normal" />
+<!--                <TextView-->
+<!--                    android:id="@+id/lamp_greater"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="@string/lamp_greater"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="normal" />-->
 
-                <SeekBar
-                    android:id="@+id/seekBar22"
-                    android:layout_width="180dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/control_volume2" />
-            </LinearLayout>
+<!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar22"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:max="100"-->
+<!--                    android:progress="0"-->
+<!--                    android:progressDrawable="@drawable/control_volume2" />-->
+<!--            </LinearLayout>-->
 
 <!--            Nguong bat he thong phun suong-->
 
@@ -293,52 +293,52 @@
 
             <!--            Nguong tat he thong phun suong-->
 
-            <TableRow android:layout_marginTop="5dp">
+<!--            <TableRow android:layout_marginTop="5dp">-->
 
-                <TextView
-                    android:id="@+id/textMistingoff"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/misting_limitoff"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textMistingoff"-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="@string/misting_limitoff"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:id="@+id/text33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/purple_700"
-                    android:textSize="20sp" />
-            </TableRow>
+<!--                <TextView-->
+<!--                    android:id="@+id/text33"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textColor="@color/purple_700"-->
+<!--                    android:textSize="20sp" />-->
+<!--            </TableRow>-->
 
-            <LinearLayout>
+<!--            <LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/hum_greater"
-                    android:layout_width="180dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/hum_greater"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="normal" />
+<!--                <TextView-->
+<!--                    android:id="@+id/hum_greater"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="@string/hum_greater"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="normal" />-->
 
-                <SeekBar
-                    android:id="@+id/seekBar33"
-                    android:layout_width="180dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/control_volume2" />
-            </LinearLayout>
+<!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar33"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:max="100"-->
+<!--                    android:progress="0"-->
+<!--                    android:progressDrawable="@drawable/control_volume2" />-->
+<!--            </LinearLayout>-->
 
 
 <!--Nguong bat may bom nuoc-->
@@ -390,52 +390,52 @@
             </LinearLayout>
 
             <!--Nguong tat may bom nuoc-->
-            <TableRow android:layout_marginTop="5dp">
+<!--            <TableRow android:layout_marginTop="5dp">-->
 
-                <TextView
-                    android:id="@+id/textPumpoff"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/pump_limitoff"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+<!--                <TextView-->
+<!--                    android:id="@+id/textPumpoff"-->
+<!--                    android:layout_width="250dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="@string/pump_limitoff"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
-                <TextView
-                    android:id="@+id/text44"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/purple_700"
-                    android:textSize="20sp" />
-            </TableRow>
+<!--                <TextView-->
+<!--                    android:id="@+id/text44"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:textColor="@color/purple_700"-->
+<!--                    android:textSize="20sp" />-->
+<!--            </TableRow>-->
 
-            <LinearLayout>
+<!--            <LinearLayout>-->
 
-                <TextView
-                    android:id="@+id/soil_greater"
-                    android:layout_width="180dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/soil_greater"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="normal" />
+<!--                <TextView-->
+<!--                    android:id="@+id/soil_greater"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="@string/soil_greater"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:textStyle="normal" />-->
 
-                <SeekBar
-                    android:id="@+id/seekBar44"
-                    android:layout_width="180dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:max="100"
-                    android:progress="0"
-                    android:progressDrawable="@drawable/control_volume2" />
-            </LinearLayout>
+<!--                <SeekBar-->
+<!--                    android:id="@+id/seekBar44"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:max="100"-->
+<!--                    android:progress="0"-->
+<!--                    android:progressDrawable="@drawable/control_volume2" />-->
+<!--            </LinearLayout>-->
 
 
             <TableRow
@@ -666,13 +666,14 @@
                     android:textSize="25sp" />
             </LinearLayout>
 
+<!--            Cai dat thoi gian -->
             <LinearLayout
                 android:layout_height="60dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -695,12 +696,26 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+<!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_lamp1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btnsetlamplan1"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -721,7 +736,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -744,12 +759,26 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_lamp2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/btnsetlamplan2"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -785,7 +814,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -808,12 +837,27 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_fan1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
 
                 <Button
                     android:id="@+id/btnsetfanlan1"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -834,7 +878,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -857,12 +901,27 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_fan2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
 
                 <Button
                     android:id="@+id/btnsetfanlan2"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -898,7 +957,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -921,12 +980,27 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_pump1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
 
                 <Button
                     android:id="@+id/btnsetpumplan1"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -947,7 +1021,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -971,11 +1045,27 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_pump2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+
                 <Button
                     android:id="@+id/btnsetpumplan2"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -1013,7 +1103,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -1036,12 +1126,27 @@
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_hum1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
 
                 <Button
                     android:id="@+id/btnsethumlan1"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch
@@ -1062,7 +1167,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="70dp"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -1086,11 +1191,27 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp" />
 
+                <!--Active-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Active:"
+                    android:textSize="22sp"
+                    android:layout_marginTop="3dp"/>
+
+                <EditText
+                    android:id="@+id/timeout_hum2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp" />
+
+
                 <Button
                     android:id="@+id/btnsethumlan2"
                     android:layout_width="60dp"
                     android:layout_height="40dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:text="set" />
 
                 <Switch

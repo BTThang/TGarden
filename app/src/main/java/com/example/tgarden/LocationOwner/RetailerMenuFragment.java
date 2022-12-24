@@ -31,11 +31,11 @@ public class RetailerMenuFragment extends Fragment {
     private ImageView imageRain;
     private ImageView imageLight1;
     private ImageView imageStatus1;
-    private ImageView imageLight2;
+    private ImageView imageFan1;
     private ImageView imageStatus2;
     private ImageView imagePump;
     private ImageView imageStatus3;
-    private ImageView imageFan;
+    private ImageView imageHum1;
     private ImageView imageStatus4;
 
 
@@ -73,13 +73,13 @@ public class RetailerMenuFragment extends Fragment {
 
         imageLight1 = view.findViewById(R.id.light1);
         imageStatus1 = view.findViewById(R.id.light1_status);
-        imageLight2 = view.findViewById(R.id.light2);
-        imageStatus2 = view.findViewById(R.id.light2_status);
+        imageFan1 = view.findViewById(R.id.fan);
+        imageStatus2 = view.findViewById(R.id.fan_status);
 
         imagePump = view.findViewById(R.id.pump1);
         imageStatus3 = view.findViewById(R.id.pump_status);
-        imageFan = view.findViewById(R.id.fan1);
-        imageStatus4 = view.findViewById(R.id.fan_status);
+        imageHum1 = view.findViewById(R.id.hum);
+        imageStatus4 = view.findViewById(R.id.hum_status);
 
         Firebase.setAndroidContext(requireContext());
 
@@ -89,10 +89,10 @@ public class RetailerMenuFragment extends Fragment {
         Firebase mRefSoil = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/soil");
         Firebase mRefRain = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/TGarden/sensor/rain");
 
-        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY1/S1_Lamp");
-        Firebase btnLight2 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY2/S2_Lamp");
-        Firebase btnPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY3/S3_Pump");
-        Firebase btnFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/RELAY4/S4_Hum");
+        Firebase btnLight1 = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/Auto/lamp");
+        Firebase btnFan = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/Auto/fan");
+        Firebase btnPump = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/Auto/pump");
+        Firebase btnHum = new Firebase("https://tgarden-f7710-default-rtdb.firebaseio.com/Auto/hum");
 
         pieView_hum.setPercentageBackgroundColor(getResources().getColor(R.color.greennhat));
         //        pieView_hum.setMainBackgroundColor(getResources().getColor(R.color.white));
@@ -101,15 +101,15 @@ public class RetailerMenuFragment extends Fragment {
         //        pieView_soil.setMainBackgroundColor(getResources().getColor(R.color.white));
 
 
-        btnFan.addValueEventListener(new ValueEventListener() {
+        btnHum.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int value = dataSnapshot.getValue(int.class);
                 if (value == 1) {
-                    imageFan.setImageResource(R.drawable.fan);
+                    imageHum1.setImageResource(R.drawable.humidifier);
                     imageStatus4.setImageResource(R.drawable.switchon1);
-                } else if (value == 0) {
-                    imageFan.setImageResource(R.drawable.fanoff);
+                } else if (value == 2) {
+                    imageHum1.setImageResource(R.drawable.humidifier_off);
                     imageStatus4.setImageResource(R.drawable.switchoff1);
                 }
             }
@@ -126,7 +126,7 @@ public class RetailerMenuFragment extends Fragment {
                 if (value == 1) {
                     imagePump.setImageResource(R.drawable.pump2);
                     imageStatus3.setImageResource(R.drawable.switchon1);
-                } else if (value == 0) {
+                } else if (value == 2) {
                     imagePump.setImageResource(R.drawable.pumpoff);
                     imageStatus3.setImageResource(R.drawable.switchoff1);
                 }
@@ -144,7 +144,7 @@ public class RetailerMenuFragment extends Fragment {
                 if (value == 1) {
                     imageLight1.setImageResource(R.drawable.lighton);
                     imageStatus1.setImageResource(R.drawable.switchon1);
-                } else if (value == 0) {
+                } else if (value == 2) {
                     imageLight1.setImageResource(R.drawable.lightoff);
                     imageStatus1.setImageResource(R.drawable.switchoff1);
                 }
@@ -156,15 +156,15 @@ public class RetailerMenuFragment extends Fragment {
             }
         });
 
-        btnLight2.addValueEventListener(new ValueEventListener() {
+        btnFan.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int value = dataSnapshot.getValue(int.class);
                 if (value == 1) {
-                    imageLight2.setImageResource(R.drawable.humidifier);
+                    imageFan1.setImageResource(R.drawable.fan);
                     imageStatus2.setImageResource(R.drawable.switchon1);
-                } else if (value == 0) {
-                    imageLight2.setImageResource(R.drawable.humidifier_off);
+                } else if (value == 2) {
+                    imageFan1.setImageResource(R.drawable.fanoff);
                     imageStatus2.setImageResource(R.drawable.switchoff1);
                 }
             }
